@@ -10,18 +10,6 @@ def encode(password):
     return encoded_password
 
 
-def decode(encoded_password):
-    decoded_password = ""
-    for char in encoded_password:
-        if char in ["0", "1", "2"]:
-            decoded_char = str(int(char) - 3 + 10)[-1]
-            decoded_password += decoded_char
-        else:
-            decoded_char = int(char) - 3
-            decoded_password += str(decoded_char)
-    return decoded_password
-
-
 def print_menu():
     print("""\nMenu
 -------------
